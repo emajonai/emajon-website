@@ -3,7 +3,7 @@ title: "Why Every Personal CRM Misses the Point"
 subtitle: "Category: Tools, Systems, and Supports (Pillar 4)"
 date: "2026-02-09"
 author: "Emajon"
-category: "tools-and-supports"
+category: "organization"
 tags: ["tools", "crm", "adhd"]
 description: "The personal CRM market is booming. Valued at approximately $14.7 billion in 2025 and projected to reach $46 billion by 2035, relationship management..."
 image: null

@@ -3,7 +3,7 @@ title: "Rejection Sensitive Dysphoria: When \"They Probably Don't Want to Hear F
 subtitle: "Your friend doesn't text back for a day"
 date: "2026-02-13"
 author: "Emajon"
-category: "adhd-and-relationships"
+category: "health"
 tags: ["adhd", "friendships", "relationships"]
 description: "Your friend doesn't text back for a day."
 image: null

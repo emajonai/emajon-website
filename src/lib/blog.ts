@@ -34,7 +34,7 @@ function parseBlogPost(slug: string, fileContent: string): BlogPost {
     subtitle: data.subtitle || undefined,
     date: data.date || new Date().toISOString().split("T")[0],
     author: data.author || "Emajon",
-    category: data.category || "building-emajon",
+    category: data.category || "community",
     tags: data.tags || [],
     description: data.description || "",
     image: data.image || null,

@@ -26,9 +26,9 @@ export default function WaitlistModal({ onClose }: WaitlistModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const waitlist = JSON.parse(localStorage.getItem("emajon-waitlist") || "[]");
+    const waitlist = JSON.parse(localStorage.getItem("emajon-newsletter") || "[]");
     waitlist.push({ email, date: new Date().toISOString() });
-    localStorage.setItem("emajon-waitlist", JSON.stringify(waitlist));
+    localStorage.setItem("emajon-newsletter", JSON.stringify(waitlist));
     setSubmitted(true);
   };
 
@@ -44,14 +44,14 @@ export default function WaitlistModal({ onClose }: WaitlistModalProps) {
         className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-lg"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="waitlist-title"
+        aria-labelledby="newsletter-title"
       >
         {submitted ? (
           <div className="text-center">
             <div className="text-4xl mb-4">&#x1f389;</div>
-            <h2 className="text-2xl font-bold text-text-primary mb-2">You&apos;re on the list!</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-2">You&apos;re subscribed!</h2>
             <p className="text-text-secondary mb-6">
-              We&apos;ll keep you updated as we build Emajon. Thanks for joining us.
+              We&apos;ll send you the best of what we publish. Thanks for subscribing.
             </p>
             <button
               onClick={onClose}
@@ -62,19 +62,19 @@ export default function WaitlistModal({ onClose }: WaitlistModalProps) {
           </div>
         ) : (
           <>
-            <h2 id="waitlist-title" className="text-2xl font-bold text-text-primary mb-2">
-              Join the Waitlist
+            <h2 id="newsletter-title" className="text-2xl font-bold text-text-primary mb-2">
+              Subscribe to the Newsletter
             </h2>
             <p className="text-text-secondary mb-6">
-              Be the first to know when Emajon launches. No spam, just updates that matter.
+              Weekly insights on money, health, and community. No spam, just content that matters.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="waitlist-email" className="block text-sm font-medium text-text-primary mb-1">
+                <label htmlFor="newsletter-email" className="block text-sm font-medium text-text-primary mb-1">
                   Email address
                 </label>
                 <input
-                  id="waitlist-email"
+                  id="newsletter-email"
                   type="email"
                   required
                   value={email}
@@ -87,7 +87,7 @@ export default function WaitlistModal({ onClose }: WaitlistModalProps) {
                 type="submit"
                 className="w-full px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-hover transition-colors"
               >
-                Join Waitlist
+                Subscribe
               </button>
             </form>
             <button

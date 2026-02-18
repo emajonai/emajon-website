@@ -27,7 +27,7 @@ export default function NewsletterSignup() {
     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
       <h3 className="text-xl font-semibold text-text-primary mb-2">Stay in the Loop</h3>
       <p className="text-text-secondary mb-4">
-        Get new articles and ADHD-friendly tips delivered to your inbox. No overwhelm, we promise.
+        New articles on money, health, and community &mdash; plus strategies for following through. No overwhelm, we promise.
       </p>
       <form onSubmit={handleSubmit} className="flex gap-3">
         <input

@@ -3,7 +3,7 @@ title: "Why \"Just Put Yourself Out There\" Doesn't Work"
 subtitle: "The most common advice for loneliness is also the least evidence-based. Here's what the research says actually helps"
 date: "2026-02-12"
 author: "Emajon"
-category: "loneliness-crisis"
+category: "community"
 tags: ["loneliness", "social-connection", "mental-health"]
 description: "You've heard it. You've probably heard it a hundred times."
 image: null

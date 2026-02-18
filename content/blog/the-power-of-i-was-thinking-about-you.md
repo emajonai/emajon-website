@@ -3,7 +3,7 @@ title: "The Power of \"I Was Thinking About You\""
 subtitle: "The simplest, most effective act of connection -- and why your ADHD brain is wrong about it being too late"
 date: "2026-02-11"
 author: "Emajon"
-category: "art-of-connection"
+category: "community"
 tags: ["friendships", "connection", "communication"]
 description: "Five words. That is all it takes."
 image: null

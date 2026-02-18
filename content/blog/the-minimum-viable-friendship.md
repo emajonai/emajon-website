@@ -3,7 +3,7 @@ title: "The Minimum Viable Friendship: What It Actually Takes to Maintain a Conn
 subtitle: "This is the article that gives you permission to stop feeling like a failure"
 date: "2026-02-14"
 author: "Emajon"
-category: "art-of-connection"
+category: "community"
 tags: ["friendships", "connection", "communication"]
 description: "You haven't called your friend in three months. Maybe four. You've thought about them — genuinely, warmly, with real affection — at least a dozen..."
 image: null

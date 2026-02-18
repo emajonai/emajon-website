@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-primary mb-3">Emajon</h3>
             <p className="text-sm text-text-secondary">
-              ADHD-informed tools and community for managing your relationships, health, and finances.
+              Investing in your financial future, your health, and your community. Content and community for brains that work differently.
             </p>
           </div>
           <div>
@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-text-primary mb-3">Stay Connected</h4>
             <p className="text-sm text-text-secondary mb-3">
-              Join our newsletter for ADHD-friendly tips and updates.
+              Subscribe for weekly insights on investing in what matters most.
             </p>
             <Link
               href="/blog"
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border-light text-center text-sm text-text-light">
-          &copy; 2025 Emajon. All rights reserved.
+          &copy; 2026 Emajon. All rights reserved.
         </div>
       </div>
     </footer>

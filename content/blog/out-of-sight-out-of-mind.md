@@ -3,7 +3,7 @@ title: "Out of Sight, Out of Mind: How Working Memory Shapes Your Relationships"
 subtitle: "You love your friends. You just can't seem to keep them visible"
 date: "2026-02-15"
 author: "Emajon"
-category: "adhd-and-relationships"
+category: "focus"
 tags: ["adhd", "friendships", "relationships"]
 description: "You're at a party, and you end up in one of those rare conversations that actually feels real. Not small talk. Not networking. You and this person..."
 image: null

@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
             <h3 className="text-xl font-semibold text-text-primary mb-2">Follow Our Journey</h3>
             <p className="text-text-secondary">
-              Read our blog for the latest updates and insights on ADHD and connection.
+              Follow along as we explore what it means to invest in your financial future, your health, and your community.
             </p>
           </div>
         </div>

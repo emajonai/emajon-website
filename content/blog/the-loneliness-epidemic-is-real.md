@@ -3,7 +3,7 @@ title: "The Loneliness Epidemic Is Real --- and We're Not Treating It Like One"
 subtitle: "The Surgeon General called it a public health crisis. The WHO formed a commission. The data shows it kills as many people as smoking 15 cigarettes a day. So why are we still treating loneliness as a personal failing?"
 date: "2026-02-16"
 author: "Emajon"
-category: "loneliness-crisis"
+category: "community"
 tags: ["loneliness", "social-connection", "mental-health"]
 description: "We call things epidemics when they kill people."
 image: null

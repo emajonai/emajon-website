@@ -3,7 +3,7 @@ title: "The ADHD Guilt Spiral: From \"I Should Call\" to \"It's Been Too Long\""
 subtitle: "The most common way ADHD brains lose friendships is not through conflict. It is through the slow, silent accumulation of unmade phone calls"
 date: "2026-02-08"
 author: "Emajon"
-category: "adhd-and-relationships"
+category: "executive-function"
 tags: ["adhd", "friendships", "relationships"]
 description: "## The Spiral"
 image: null

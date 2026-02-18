@@ -3,7 +3,7 @@ title: "Why We're Building This (A Personal Story)"
 subtitle: "This is the eighth article in our series on loneliness, ADHD, and the mechanics of human connection. It's the first one where I talk about Emajon directly — not as a product pitch, but as the thing I need to exist"
 date: "2026-02-10"
 author: "Emajon"
-category: "building-emajon"
+category: "community"
 tags: ["startup", "adhd", "behind-the-scenes"]
 description: "## The Slow Fade"
 image: null

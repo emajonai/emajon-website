@@ -3,7 +3,7 @@ title: "The ADHD Friendship Problem Nobody Talks About"
 subtitle: "You love your friends. You think about them. You just... don't call"
 date: "2026-02-17"
 author: "Emajon"
-category: "adhd-and-relationships"
+category: "community"
 tags: ["adhd", "friendships", "relationships"]
 description: "Let me tell you about a pattern you might recognize."
 image: null

@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Tools from "@/components/Tools";
+import Content from "@/components/Content";
 import Community from "@/components/Community";
 import Contact from "@/components/Contact";
 
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Tools />
+      <Content />
       <Community />
       <Contact />
     </>

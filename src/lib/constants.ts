@@ -1,46 +1,61 @@
 export const SITE_NAME = "Emajon";
 export const SITE_URL = "https://www.emajon.com";
 export const SITE_DESCRIPTION =
-  "ADHD-informed tools and community for managing your relationships, health, and finances.";
+  "Investing in your financial future, your health, and your community. Content and community for brains that work differently.";
 
 export type CategorySlug =
-  | "loneliness-crisis"
-  | "adhd-and-relationships"
-  | "art-of-connection"
-  | "tools-and-supports"
-  | "building-emajon";
+  | "financial-future"
+  | "health"
+  | "community"
+  | "focus"
+  | "organization"
+  | "executive-function";
+
+export type PillarType = "investment" | "foundation";
 
 export interface ContentPillar {
   slug: CategorySlug;
   name: string;
   description: string;
+  type: PillarType;
 }
 
 export const CONTENT_PILLARS: ContentPillar[] = [
   {
-    slug: "loneliness-crisis",
-    name: "The Loneliness Crisis",
-    description: "Understanding why so many of us feel disconnected",
+    slug: "financial-future",
+    name: "Financial Future",
+    description: "Financial literacy, planning, and building wealth",
+    type: "investment",
   },
   {
-    slug: "adhd-and-relationships",
-    name: "ADHD & Relationships",
-    description: "How ADHD shapes the way we connect with others",
+    slug: "health",
+    name: "Health",
+    description: "Physical, mental, and emotional wellbeing",
+    type: "investment",
   },
   {
-    slug: "art-of-connection",
-    name: "The Art of Connection",
-    description: "Practical strategies for building and maintaining relationships",
+    slug: "community",
+    name: "Community",
+    description: "Relationships, social connections, and belonging",
+    type: "investment",
   },
   {
-    slug: "tools-and-supports",
-    name: "Tools & Supports",
-    description: "Technology and systems that help us stay connected",
+    slug: "focus",
+    name: "Focus",
+    description: "Staying on track in an attention-deficit world",
+    type: "foundation",
   },
   {
-    slug: "building-emajon",
-    name: "Building Emajon",
-    description: "Behind the scenes of what we are creating",
+    slug: "organization",
+    name: "Organization",
+    description: "Managing complexity without overwhelm",
+    type: "foundation",
+  },
+  {
+    slug: "executive-function",
+    name: "Executive Function",
+    description: "Planning, prioritizing, and following through",
+    type: "foundation",
   },
 ];
 
