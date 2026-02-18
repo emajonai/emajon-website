@@ -1,0 +1,104 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+
+interface WaitlistModalProps {
+  onClose: () => void;
+}
+
+export default function WaitlistModal({ onClose }: WaitlistModalProps) {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const waitlist = JSON.parse(localStorage.getItem("emajon-waitlist") || "[]");
+    waitlist.push({ email, date: new Date().toISOString() });
+    localStorage.setItem("emajon-waitlist", JSON.stringify(waitlist));
+    setSubmitted(true);
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div
+        ref={modalRef}
+        className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-lg"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="waitlist-title"
+      >
+        {submitted ? (
+          <div className="text-center">
+            <div className="text-4xl mb-4">&#x1f389;</div>
+            <h2 className="text-2xl font-bold text-text-primary mb-2">You&apos;re on the list!</h2>
+            <p className="text-text-secondary mb-6">
+              We&apos;ll keep you updated as we build Emajon. Thanks for joining us.
+            </p>
+            <button
+              onClick={onClose}
+              className="px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-hover transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+          <>
+            <h2 id="waitlist-title" className="text-2xl font-bold text-text-primary mb-2">
+              Join the Waitlist
+            </h2>
+            <p className="text-text-secondary mb-6">
+              Be the first to know when Emajon launches. No spam, just updates that matter.
+            </p>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="waitlist-email" className="block text-sm font-medium text-text-primary mb-1">
+                  Email address
+                </label>
+                <input
+                  id="waitlist-email"
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  className="w-full px-4 py-2 border border-border-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-text-primary"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-hover transition-colors"
+              >
+                Join Waitlist
+              </button>
+            </form>
+            <button
+              onClick={onClose}
+              className="mt-4 w-full text-sm text-text-light hover:text-text-secondary transition-colors"
+            >
+              Maybe later
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
