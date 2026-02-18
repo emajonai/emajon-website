@@ -8,7 +8,7 @@ import BlogFilter from "./BlogFilter";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Articles on financial literacy, health, community, and thriving in an attention-deficit world.",
+    "Insights on connection, health, and thriving with ADHD — from The Profitable Life Blog.",
 };
 
 interface BlogPageProps {
@@ -27,8 +27,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-text-primary mb-4">Blog</h1>
         <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-          Honest writing about money, health, community, and thriving in an
-          attention-deficit world.
+          Insights on connection, health, wealth, and thriving
+          with ADHD.
         </p>
       </div>
 
