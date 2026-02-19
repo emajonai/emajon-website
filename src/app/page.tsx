@@ -20,24 +20,22 @@ export default async function Home() {
           <Contact />
         </>
       ) : (
-        <section className="py-20 text-center bg-white">
-          <div className="max-w-2xl mx-auto px-4">
-            <p className="text-lg text-text-secondary mb-4">
+        <section className="py-12 sm:py-14 text-center bg-white">
+          <div className="max-w-xl mx-auto px-4">
+            <p className="text-sm sm:text-base text-text-secondary mb-8">
               We&apos;re building something for brains that work differently.
+              More details coming soon.
             </p>
-            <p className="text-text-secondary mb-8">
-              More details coming soon. Follow our blog for updates.
-            </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-3 justify-center">
               <a
                 href="/blog"
-                className="px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary-hover transition-colors"
+                className="px-5 py-2 bg-secondary text-white text-sm font-semibold rounded-lg hover:bg-secondary-hover transition-colors"
               >
                 Read the Blog
               </a>
               <a
                 href="/stealth-login"
-                className="px-6 py-3 border-2 border-purple-300 text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
+                className="px-5 py-2 border-2 border-purple-300 text-purple-700 text-sm font-semibold rounded-lg hover:bg-purple-50 transition-colors"
               >
                 Have an access code?
               </a>
