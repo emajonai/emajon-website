@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const NAV_LINKS = [
-  { href: "/#mission", label: "Mission" },
+const PUBLIC_LINKS = [
+  { href: "/blog", label: "Blog" },
+];
+
+const GATED_LINKS = [
   { href: "/#pillars", label: "Our Focus" },
   { href: "/blog", label: "Blog" },
   { href: "/#content", label: "Podcast" },
@@ -14,6 +17,21 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasAccess, setHasAccess] = useState(false);
+
+  useEffect(() => {
+    // Check if stealth cookie exists (readable via document.cookie won't work for httpOnly)
+    // Instead, check if gated content is visible by fetching a lightweight check
+    // Simplest: just check if the cookie name appears in a non-httpOnly way
+    // Actually, let's just always show public nav and let the middleware handle redirects
+    // But we can do a simple fetch to check access
+    fetch("/api/stealth-check")
+      .then((r) => r.json())
+      .then((d) => setHasAccess(d.hasAccess))
+      .catch(() => setHasAccess(false));
+  }, []);
+
+  const links = hasAccess ? GATED_LINKS : PUBLIC_LINKS;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border-light">
@@ -24,7 +42,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-6">
-          {NAV_LINKS.map((link) => (
+          {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
@@ -57,7 +75,7 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-border-light">
           <ul className="px-4 py-4 space-y-3">
-            {NAV_LINKS.map((link) => (
+            {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

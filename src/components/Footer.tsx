@@ -8,8 +8,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-secondary mb-3">Emajon</h3>
             <p className="text-sm text-white/70">
-              Building content and community for profitable living &mdash; in
-              health, wealth, and relationships.
+              Investing in your financial future, your health, and your community.
+              Content and community for brains that work differently.
             </p>
             <p className="text-xs text-white/50 mt-3">
               No ads. No data selling. Just honest content to help you thrive.

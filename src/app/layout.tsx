@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Emajon - Living Profitably",
+    default: "Emajon - Investing for Life",
     template: "%s | Emajon",
   },
   description:
-    "Content and community for profitable living — in health, wealth, and relationships. Built for brains that work differently.",
+    "Investing in your financial future, your health, and your community. Content and community for brains that work differently.",
   openGraph: {
     type: "website",
     locale: "en_US",

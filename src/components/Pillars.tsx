@@ -61,7 +61,7 @@ export default function Pillars() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            Three Pillars of a Profitable Life
+            Three Pillars of Investing for Life
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             True profitability isn&apos;t just about money. It&apos;s about investing in the

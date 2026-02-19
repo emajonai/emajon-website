@@ -9,7 +9,7 @@ export default function About() {
           <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-8">
             We believe true wealth comes from the combination of strong
             relationships, good health, and financial stability. Emajon exists to
-            help you live a more &ldquo;profitable&rdquo; life across all three
+            help you invest intentionally in all three
             dimensions &mdash; starting with the ADHD community but extending to
             anyone seeking deeper connections.
           </p>

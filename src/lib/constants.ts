@@ -1,7 +1,7 @@
 export const SITE_NAME = "Emajon";
 export const SITE_URL = "https://www.emajon.com";
 export const SITE_DESCRIPTION =
-  "Content and community for profitable living — in health, wealth, and relationships. Built for brains that work differently.";
+  "Investing in your financial future, your health, and your community. Content and community for brains that work differently.";
 
 export type CategorySlug =
   | "financial-future"

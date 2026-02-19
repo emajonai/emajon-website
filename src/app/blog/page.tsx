@@ -8,7 +8,7 @@ import BlogFilter from "./BlogFilter";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights on connection, health, and thriving with ADHD — from The Profitable Life Blog.",
+    "Insights on connection, health, wealth, and thriving in an attention-deficit world.",
 };
 
 interface BlogPageProps {
