@@ -2,15 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useUser, UserButton, SignInButton } from "@clerk/nextjs";
 
 const TASKS_APP_URL = process.env.NEXT_PUBLIC_TASKS_URL || "https://emajon-web.vercel.app";
 
-export default function Header({ hasAccess = false }: { hasAccess?: boolean }) {
+export default function Header() {
+  const { isSignedIn, isLoaded } = useUser();
   const [menuOpen, setMenuOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const toolsRef = useRef<HTMLLIElement>(null);
 
-  // Close tools dropdown on outside click
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (toolsRef.current && !toolsRef.current.contains(e.target as Node)) {
@@ -38,7 +39,7 @@ export default function Header({ hasAccess = false }: { hasAccess?: boolean }) {
               Blog
             </Link>
           </li>
-          {hasAccess && (
+          {isSignedIn && (
             <li className="relative" ref={toolsRef}>
               <button
                 onClick={() => setToolsOpen(!toolsOpen)}
@@ -63,6 +64,19 @@ export default function Header({ hasAccess = false }: { hasAccess?: boolean }) {
               )}
             </li>
           )}
+          <li>
+            {isLoaded && (
+              isSignedIn ? (
+                <UserButton />
+              ) : (
+                <SignInButton mode="modal">
+                  <button className="text-sm font-medium px-4 py-1.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                    Sign In
+                  </button>
+                </SignInButton>
+              )
+            )}
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -95,7 +109,7 @@ export default function Header({ hasAccess = false }: { hasAccess?: boolean }) {
                 Blog
               </Link>
             </li>
-            {hasAccess && (
+            {isSignedIn && (
               <>
                 <li className="pt-2 border-t border-border-light">
                   <span className="block text-xs font-semibold text-text-secondary/60 uppercase tracking-wider mb-2">Tools</span>
@@ -113,6 +127,19 @@ export default function Header({ hasAccess = false }: { hasAccess?: boolean }) {
                 </li>
               </>
             )}
+            <li className="pt-2 border-t border-border-light">
+              {isLoaded && (
+                isSignedIn ? (
+                  <UserButton />
+                ) : (
+                  <SignInButton mode="modal">
+                    <button className="text-sm font-medium px-4 py-1.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                )
+              )}
+            </li>
           </ul>
         </div>
       )}

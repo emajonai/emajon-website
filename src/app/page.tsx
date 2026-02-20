@@ -1,4 +1,4 @@
-import { cookies } from "next/headers";
+import { auth } from "@clerk/nextjs/server";
 import Hero from "@/components/Hero";
 import Pillars from "@/components/Pillars";
 import Content from "@/components/Content";
@@ -6,13 +6,13 @@ import Community from "@/components/Community";
 import Contact from "@/components/Contact";
 
 export default async function Home() {
-  const cookieStore = await cookies();
-  const hasAccess = cookieStore.get("stealth_access")?.value === "granted";
+  const { userId } = await auth();
+  const isSignedIn = !!userId;
 
   return (
     <>
       <Hero />
-      {hasAccess ? (
+      {isSignedIn ? (
         <>
           <Pillars />
           <Content />
@@ -32,12 +32,6 @@ export default async function Home() {
                 className="px-5 py-2 bg-secondary text-white text-sm font-semibold rounded-lg hover:bg-secondary-hover transition-colors"
               >
                 Read the Blog
-              </a>
-              <a
-                href="/stealth-login"
-                className="px-5 py-2 border-2 border-purple-300 text-purple-700 text-sm font-semibold rounded-lg hover:bg-purple-50 transition-colors"
-              >
-                Have an access code?
               </a>
             </div>
           </div>
